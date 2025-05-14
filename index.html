@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler de Pitbikes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://calendar.google.com/calendar/embed?src=2b5eed639b22b0e786e19320c4aa0f3af1e18d5b61dbeca5dee15bc0566677b6%40group.calendar.google.com&ctz=Europe%2FMadrid" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR"></script>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: url('media/fondo.jpg')center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+      align-items: center;
+      color: white;
+      text-align: center;
+    }   
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header a {
+      background: #ff5c33;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+    }
+    nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    .precios, .formulario {
+      margin-top: 2rem;
+    }
+    table {
+        width: 100%;
+        border: 10px solid #ff5c33;
+        border-radius: 35px;
+        margin: 1rem;
+        
+    }
+    th, td {
+        border: 1px transparent;
+        padding: 1rem;
+        text-align: center;
+    }
+    table {
+      width: 100%;
+      border:10px solid #ff5c33;
+      border-radius: 35px;
+      margin: 1rem;
+    }
+    th, td {
+      border: 1px transparent;
+      padding: 1rem;
+      text-align: center;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 0;
+      margin-top: 2rem;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .testimonios blockquote {
+      font-style: italic;
+      background: #fff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #ff5c33;
+    }
+    .testimonios cite {
+      display: block;
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    .payment-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .stripe-button {
+      background: #6772e5;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¡Alquila tu Pitbike!</h1>
+    <a href="#reserva">Reservar Ahora</a>
+  </header>
+
+  <nav>
+    <a href="#galeria">Galería</a>
+    <a href="#modelos">Modelos</a>
+    <a href="#precios">Tarifas</a>
+    <a href="#reserva">Reservas</a>
+    <a href="#testimonios">Opiniones</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="precios" class="precios">    
+  </section>
+
+  <section>
+    <table>
+      <tr>
+        <th>Opción</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+      </tr>
+      <tr>
+        <td>Solo Moto</td>
+        <td>Alquiler de la pitbike por un dia</td>
+        <td>160€</td>
+      </tr>
+      <tr>
+        <td>Moto + Equipación</td>
+        <td>Incluye moto, casco, protecciones y guantes</td>
+        <td>200€</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="galeria" class="galeria">
+    <h2>Galería de Pitbikes</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <a href="modelo1.html"><img src="https://german-pit.bike/wp-content/uploads/pitbike-mrf-140sm-supermoto.jpg" alt="Pitbike 1"></a>
+      <a href="modelo2.html"><img src="https://www.minipitbikes.es/10278-thickbox_default/pit-bike-160cc-super-racer-smr-malcor.jpg" alt="Pitbike 2"></a>
+    </div>
+  </section>
+
+  <section id="reserva" class="formulario">
+    <h2>Reservar Pitbike</h2>
+    <p>Consulta disponibilidad y haz tu reserva.</p>
+
+    <iframe src="https://calendar.google.com/calendar/embed?src=2b5eed639b22b0e786e19320c4aa0f3af1e18d5b61dbeca5dee15bc0566677b6%40group.calendar.google.com&ctz=Europe%2FMadrid" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <form>
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Teléfono:</label>
+      <input type="tel" name="telefono" required>
+
+      <label>Fecha del fin de semana:</label>
+      <input type="date" name="fecha" required>
+
+      <label>Tipo de alquiler:</label>
+      <select name="tipo">
+        <option value="solo_moto">Solo Moto</option>
+        <option value="moto_equipacion">Moto + Equipación</option>
+      </select>
+
+      <button type="submit">Confirmar Reserva</button>
+    </form>
+
+    <h3>Realizar Pago</h3>
+    <div class="payment-buttons">
+      <div id="paypal-button-container"></div>
+      
+    </div>
+
+    <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '160'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Pago completado por ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <h2>Opiniones de Clientes</h2>
+    <blockquote>
+      "¡Una experiencia brutal! Las motos están en perfecto estado y el trato fue excelente. Repetiré sin duda."
+      <cite>— Carlos M.</cite>
+    </blockquote>
+    <blockquote>
+      "Muy buena organización y el equipo incluido es de calidad. Ideal para pasar un finde diferente."
+      <cite>— Laura G.</cite>
+    </blockquote>
+    <blockquote>
+      "Me encantó lo fácil que fue reservar y lo bien que se comporta la moto. Recomendado 100%."
+      <cite>— Iván R.</cite>
+    </blockquote>
+
+    <h3>Deja tu opinión</h3>
+      <form action="https://formsubmit.co/TU_CORREO@ejemplo.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo Testimonio Web">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Tu nombre:</label>
+      <input type="text" name="nombre_opinion" required>
+
+      <label>Tu opinión:</label>
+      <textarea name="opinion" rows="4" required></textarea>
+
+      <button type="submit">Enviar Opinión</button>
+      </form>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: info@alquilerpitbikes.com</p>
+    <p>Teléfono / WhatsApp: +34 689 95 94 62</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alquiler Pitbikes. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
