@@ -259,11 +259,16 @@
 
     <h3>Deja tu opinión</h3>
 <form action="https://formsubmit.co/el/lofuri" method="POST">
-    <label>Nombre:</label>
-     <input type="text" name="name" required>
-    <label>Tu opinión:</label>
-     <input type="text" name="opinion" required>
-     <button type="submit">Enviar</button>
+      <input type="hidden" name="_subject" value="Nuevo Testimonio Web">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Tu nombre:</label>
+      <input type="text" name="nombre_opinion" required>
+
+      <label>Tu opinión:</label>
+      <textarea name="opinion" rows="4" required></textarea>
+
+      <button type="submit">Enviar Opinión</button>
 </form>
   </section>
 
