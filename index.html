@@ -48,39 +48,26 @@
       background: #222;
       color: white;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: space-around;
       padding: 1rem;
-      flex-wrap: wrap;
     }
-    .nav-logo {
-      font-weight: bold;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-    .nav-links a {
+    nav a {
       color: white;
       text-decoration: none;
     }
-    {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .nav-links.active {
-        display: flex;
-      }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    .precios, .formulario {
+      margin-top: 2rem;
     }
     table {
         width: 100%;
@@ -161,17 +148,14 @@
     <h1>¡Alquila tu Pitbike!</h1>
     <a href="#reserva">Reservar Ahora</a>
   </header>
- <nav>
-    <div class="nav-logo">Pitbikes</div>
-    <div class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</div>
-    <div class="nav-links">
-      <a href="#galeria">Galería</a>
-      <a href="#modelos">Modelos</a>
-      <a href="#precios">Tarifas</a>
-      <a href="#reserva">Reservas</a>
-      <a href="#testimonios">Opiniones</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+
+  <nav>
+    <a href="#galeria">Galería</a>
+    <a href="#modelos">Modelos</a>
+    <a href="#precios">Tarifas</a>
+    <a href="#reserva">Reservas</a>
+    <a href="#testimonios">Opiniones</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
   <section id="precios" class="precios">    
