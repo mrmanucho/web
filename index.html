@@ -31,6 +31,7 @@
       align-items: center;
       color: white;
       text-align: center;
+    }   
     header h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -47,39 +48,12 @@
       background: #222;
       color: white;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: space-around;
       padding: 1rem;
-      flex-wrap: wrap;
     }
-    .nav-logo {
-      font-weight: bold;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-    .nav-links a {
+    nav a {
       color: white;
       text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .nav-links.active {
-        display: flex;
-      }
     }
     section {
       padding: 2rem;
@@ -96,11 +70,25 @@
       margin-top: 2rem;
     }
     table {
-      width: 100%;
-      border-collapse: collapse;
+        width: 100%;
+        border: 10px solid #ff5c33;
+        border-radius: 35px;
+        margin: 1rem;
+        
     }
     th, td {
-      border: 1px solid #ddd;
+        border: 1px transparent;
+        padding: 1rem;
+        text-align: center;
+    }
+    table {
+      width: 100%;
+      border:10px solid #ff5c33;
+      border-radius: 35px;
+      margin: 1rem;
+    }
+    th, td {
+      border: 1px transparent;
       padding: 1rem;
       text-align: center;
     }
@@ -136,6 +124,7 @@
       font-weight: bold;
       margin-top: 0.5rem;
     }
+
     .payment-buttons {
       display: flex;
       flex-direction: column;
